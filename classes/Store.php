@@ -10,7 +10,7 @@ class Store
 {
     private static $instace=null;
 
-    private $db;
+    private $pdo;
 
     static public  function getInstance()
     {
@@ -18,7 +18,8 @@ class Store
         {
             $database=Config::getInstance()->getKey('database');
             $opt=isset($database['options'])?$database['options']:null;
-            self::$instace=  new Store($database['dbname'],$database['user'],$database['passwd'],$opt,$database['host']);
+
+            self::$instace=  new Store($database['dsn'],$database['user'],$database['passwd'],$opt);
         }
 
         return self::$instace;
@@ -27,28 +28,26 @@ class Store
     static public  function model($modelName)
     {
         $modelClass=$modelName."Model";
-        return  new $modelClass(self::getInstance()->db);
+        return  new $modelClass(self::getInstance()->pdo);
     }
     
-    private function __construct($dbname, $username, $passwd, $options,$host='localhost',$port=3306,$socket=null)
+    private function __construct($dsn, $username, $passwd, $options)
     {
-        try{
-            $this->db= new mysqli($host,$username, $passwd,$dbname,$port,$socket);
 
-            if (empty($this->db))
-            {
-                throw( new Exception('Не могу соеденится'));
-            }
-        }
-        catch (Exception $e)
+        try
         {
-            echo $e->getMessage();
+            $this->pdo=new PDO($dsn, $username, $passwd, $options);
+            $this->pdo->exec('SET NAMES utf8');
+            $this->pdo->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+        }catch (PDOException $e)
+        {
+            echo $e->errorInfo;
+            exit("!!!!");
         }
-
     }
      
-    public function getDb()
+    public function getPdo()
     {
-        return $this->db;
+        return $this->pdo;
     }
 }

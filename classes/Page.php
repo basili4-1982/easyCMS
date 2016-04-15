@@ -37,7 +37,7 @@ class Page
     function view($url,$data=array())
     {
         $this->pageinfo=Store::model('Page')->pageInfo($url);
-        
+
         $layout=$this->pageinfo['layout'];
 
         $layoutData=array();

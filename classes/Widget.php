@@ -75,7 +75,7 @@ class Widget
                 $nameDataProvider=unserialize($options['name_data_provider']);
                 $condDataProvider=$options['cond_data_provider'];
 
-                $db=Store::getInstance()->getDb();
+                $pdo=Store::getInstance()->getPdo();
                 $sql='SELECT * FROM '.$nameDataProvider;
 
                 if ( !empty($condDataProvider) )
@@ -96,7 +96,7 @@ class Widget
                     }
                 }
 
-                $rows=$db->query($sql);
+                $rows=$pdo->query($sql);
                 break;
             }
         }

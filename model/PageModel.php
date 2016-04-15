@@ -8,14 +8,14 @@
  */
 class PageModel
 {
-    /**
-     * @var mysqli
-    */
-    private $db;
+    /***
+     * @var $pdo PDO
+     */
+    private $pdo;
 
-    function __construct($db)
+    function __construct($pdo)
     {
-        $this->db= $db;
+        $this->pdo= $pdo;
     }
 
     function pageInfo($url)
@@ -26,11 +26,7 @@ class PageModel
                    p.meta,
                    p.layout 
             FROM pages p WHERE p.url="'.$url.'"';
-
-        /**
-         * @var mysqli_result
-         */
-        $r=$this->db->query($sql);
-        return $r->fetch_assoc();
+        
+        return $this->pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
     }
 }

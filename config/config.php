@@ -9,9 +9,6 @@
 return [
     "database"=>[
                     'dsn'=>'mysql:host=localhost;dbname=site',
-                    'host'=>'localhost',
-                    'dbname'=>'site',
-                    'port'=>'port',
                     'user'=>'root',
                     'passwd'=>'',
                     'options'=>[
