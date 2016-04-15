@@ -1,0 +1,7 @@
+{
+    "name": "1/site",
+    "require": {
+        "twig/twig": "^1.24",
+        "phpunit/phpunit": "5.0.*"
+    }
+}

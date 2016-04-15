@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="05f472dd-2dc4-43fc-b34b-7930d95253a8" name="virt" url="http://192.168.122.88">
+        <fileTransfer host="192.168.122.88" port="22" rootFolder="/var/www/html" accessType="SFTP" password="dfdbdfcbdfd0dfdddfd9dfd2df9bdf98df99" username="vahmedjanov">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
