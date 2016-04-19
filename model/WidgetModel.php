@@ -8,12 +8,12 @@ class WidgetModel
      */
     private $pdo;
 
-    function __construct($pdo)
+   public function __construct($pdo)
     {
         $this->pdo= $pdo;
     }
 
-    function getSetting($idKey,$name)
+   public  function getSetting($idKey,$name)
     {
         $sql='SELECT ws.options 
               FROM 
@@ -45,63 +45,29 @@ class WidgetModel
         }
     }
 
-    function saveSetting($idKey,$name,$setting)
+   public function saveSetting($idKey,$name,$setting)
     {
-        $sql="INSERT INTO widget_settings(id_key, name, options) VALUES (:id, :name, :options)";
+        $sql="UPDATE widget_settings ws 
+                  SET ws.options=:options
+                  WHERE ws.id_key=:id AND ws.name=:name";
 
-        $sql2="INSERT INTO `widget_settings`(`id_key`, `name`, `options`) VALUE (2, 'asas', 'asdasd')";
+        try{
+            $stmt=$this->pdo->prepare($sql);
+            $stmt->bindParam(':id', $idKey, PDO::PARAM_STR);
+            $stmt->bindParam(':name', $name, PDO::PARAM_STR);
+            $stmt->bindValue(':options', serialize($setting), PDO::PARAM_STR);
+            $stmt->execute();
+        }
+        catch (Exception $e)
+        {
+            Debug::write($e->getMessage());
+            return false;
+        }
 
-        $setting="1";
-
-        $db=$this->pdo;
-
-        $db->exec($sql2) or die(print_r($db->errorInfo(), true));
-
-//        $sh=$this->pdo->prepare($sql2);
-//
-//        var_dump($sh);
-//
-//        $sh->execute();
-//
-//        var_dump($this->pdo->errorInfo());
-
-        exit("!!!111");
-
-//        try{
-//            $stmt = $this->pdo->prepare($sql);
-////            $stmt->bindParam(':id', $idKey, PDO::PARAM_STR);
-////            $stmt->bindParam(':name', $name, PDO::PARAM_STR);
-////            $stmt->bindParam(':options', $setting, PDO::PARAM_STR);
-//            $stmt->execute([
-//                            ':id'=>$idKey,
-//                            ':name'=>$name,
-//                            ':options'=>$setting
-//                            ]);
-//        }
-//        catch (Exception $e)
-//        {
-//            echo $e->getMessage().PHP_EOL;
-//            exit();
-//        }
-//        $q=$this->pdo->prepare($sql);
-//        $q->bindParam(':id',$idKey);
-//        $q->bindParam(':name',$name,PDO::PARAM_STR);
-//        $q->bindValue(':options',"11",PDO::PARAM_STR);
-//        //$q->bindValue(':options',serialize($setting),PDO::PARAM_STR);
-//
-//        var_dump($q);
-//        $res=$q->execute();
-//
-//
-//        if (!$res)
-//        {
-//            var_dump($this->pdo->errorInfo());
-//        }
-        //return $this->pdo->lastInsertId();
+        return true;
     }
 
-
-    function getMaxKey($name)
+   public function getMaxKey($name)
     {
         $sql="SELECT MAX(ws.id_key) as `max` FROM  widget_settings ws WHERE ws.name=:name";
 
@@ -118,11 +84,11 @@ class WidgetModel
         return 0;
     }
 
-    function newKey($name)
+   public function newKey($name)
     {
         $this->pdo->beginTransaction();
         $max=$this->getMaxKey($name);
-
+        
         try
         {
             $sql="INSERT HIGH_PRIORITY INTO widget_settings(id_key, name, options)   VALUES (:id, :name, '')";
@@ -135,8 +101,17 @@ class WidgetModel
             $this->pdo->rollBack();
             exit();
         }
+        $this->pdo->commit();
 
         return $max+1;
     }
 
+   public function hasKey($idKey,$name)
+   {
+       $sql = "SELECT count(id_key) FROM widget_settings WHERE id_key=:id_key AND name=:name";
+
+       $q=$this->pdo->prepare($sql);
+       $q->execute([':id_key'=>$idKey,':name'=>$name]);
+       return  $q->fetchColumn(0)>0;
+   }
 }

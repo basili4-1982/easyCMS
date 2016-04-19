@@ -30,9 +30,7 @@ class Widget
          * @var $wm WidgetModel;
          */
         $wm=Store::model('Widget');
-        var_dump(array($keyId,$name,$setting));
-        echo $wm->saveSetting(2,$name,$setting);
-        exit("!!!!");
+        $wm->saveSetting($keyId,$name,$setting);
     }
 
 
@@ -104,13 +102,18 @@ class Widget
         return $rows;
     }
 
-   protected function init($keyId)
+   protected function init($idKey)
    {
         /**
          * @var $wm WidgetModel
          */
         $wm=Store::model('Widget');
-        $this->idKey=$wm->newKey($keyId);
+
+       if (!$wm->hasKey($idKey)){
+           $this->idKey=$wm->newKey($idKey);
+       }else{
+           $this->idKey=$idKey;
+       }
    }
 
 }

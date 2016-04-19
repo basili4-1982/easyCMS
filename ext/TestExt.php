@@ -24,7 +24,7 @@ class TestExt extends Widget
     {
         parent::init($keyId);
 
-        var_dump($this->getSetting(1,$this->name));
+        //var_dump($this->getSetting(1,$this->name));
 
         $this->saveSetting(2,$this->name,array(1,2));
 //
