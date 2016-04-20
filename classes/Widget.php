@@ -151,7 +151,7 @@ class Widget
        }
    }
 
-    protected function getParams($params)
+  protected function getParams($params)
     {
         $res=[];
 
@@ -200,4 +200,8 @@ class Widget
         return $res;
     }
 
+    public function __construct()
+    {
+        $this->name=str_replace('ext','',strtolower(get_class($this)));
+    }
 }

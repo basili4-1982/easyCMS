@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc58cd5d-738f-40fb-8fae-3dc513d2377e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/DataModel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Widget.php" afterPath="$PROJECT_DIR$/classes/Widget.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ext/TestExt.php" afterPath="$PROJECT_DIR$/ext/TestExt.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/WidgetModel.php" afterPath="$PROJECT_DIR$/model/WidgetModel.php" />
     </list>
     <ignored path="site.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,20 +44,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Widget.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Widget.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/Widget.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
-              <caret line="131" column="53" selection-start-line="131" selection-start-column="53" selection-end-line="131" selection-end-column="53" />
+            <state relative-caret-position="476">
+              <caret line="205" column="5" selection-start-line="205" selection-start-column="5" selection-end-line="205" selection-end-column="5" />
               <folding>
+                <element signature="e#883#3673#0#PHP" expanded="false" />
                 <element signature="e#962#1279#0#PHP" expanded="false" />
                 <element signature="e#1332#1648#0#PHP" expanded="false" />
                 <element signature="e#1438#1611#0#PHP" expanded="false" />
                 <element signature="e#1551#1611#0#PHP" expanded="false" />
+                <element signature="e#1662#2345#0#PHP" expanded="false" />
+                <element signature="e#1806#2307#0#PHP" expanded="false" />
+                <element signature="e#1994#2118#0#PHP" expanded="false" />
+                <element signature="e#2254#2307#0#PHP" expanded="false" />
+                <element signature="e#2399#2471#0#PHP" expanded="false" />
+                <element signature="e#2485#3663#0#PHP" expanded="false" />
+                <element signature="e#2755#3329#0#PHP" expanded="false" />
+                <element signature="e#2910#3311#0#PHP" expanded="false" />
+                <element signature="e#3416#3532#0#PHP" expanded="false" />
                 <element signature="e#3844#3987#0#PHP" expanded="false" />
                 <element signature="e#3941#3987#0#PHP" expanded="false" />
-                <element signature="n#getParams#0;n#Widget#0;n#!!top" expanded="true" />
-                <marker date="1461156006512" expanded="true" signature="2703:2717" placeholder="SELECT * FRO... ${$nameDataProvider}" />
+                <element signature="e#4066#5329#0#PHP" expanded="false" />
+                <element signature="e#4189#5289#0#PHP" expanded="false" />
+                <element signature="e#4254#4609#0#PHP" expanded="false" />
+                <element signature="e#4287#4564#0#PHP" expanded="false" />
+                <element signature="e#4432#4564#0#PHP" expanded="false" />
+                <element signature="e#4627#4956#0#PHP" expanded="false" />
+                <element signature="e#4662#4911#0#PHP" expanded="false" />
+                <element signature="e#4779#4911#0#PHP" expanded="false" />
+                <element signature="e#4974#5275#0#PHP" expanded="false" />
+                <element signature="e#5005#5257#0#PHP" expanded="false" />
+                <element signature="e#5125#5257#0#PHP" expanded="false" />
+                <element signature="n#__construct#0;n#Widget#0;n#!!top" expanded="true" />
+                <marker date="1461160081057" expanded="false" signature="2703:2717" placeholder="SELECT * FRO... ${$nameDataProvider}" />
               </folding>
             </state>
           </provider>
@@ -75,15 +94,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestExt.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestExt.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ext/TestExt.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+            <state relative-caret-position="136">
+              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
               <folding>
-                <element signature="n#__construct#0;n#TestExt#0;n#!!top" expanded="true" />
-                <marker date="1461155964406" expanded="true" signature="1020:1051" placeholder="SELECT * FRO... menu" />
-                <marker date="1461155964406" expanded="true" signature="1177:1222" placeholder="..." />
+                <element signature="n#TestExt#0;n#!!top" expanded="true" />
+                <element signature="n#run#0;n#TestExt#0;n#!!top" expanded="true" />
+                <marker date="1461160018862" expanded="true" signature="998:1029" placeholder="SELECT * FRO... menu" />
+                <marker date="1461160018862" expanded="false" signature="1152:1197" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -320,7 +340,7 @@
       <workItem from="1461068586695" duration="3535000" />
       <workItem from="1461139339629" duration="9000" />
       <workItem from="1461141945279" duration="948000" />
-      <workItem from="1461149756923" duration="5543000" />
+      <workItem from="1461149756923" duration="6779000" />
     </task>
     <task id="LOCAL-00001" summary="PDO&#10;">
       <created>1460728987425</created>
@@ -336,11 +356,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461072543109</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Источник данных &#10;">
+      <created>1461156046312</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1461156046312</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54714000" />
+    <option name="totallyTimeSpent" value="55950000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -348,6 +375,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29051173" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -356,7 +384,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -380,7 +407,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="PDO&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="PDO&#10;" />
+    <MESSAGE value="Источник данных &#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Источник данных &#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -446,14 +474,35 @@
         <state relative-caret-position="340">
           <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
           <folding>
+            <element signature="e#883#3673#0#PHP" expanded="false" />
             <element signature="e#962#1279#0#PHP" expanded="false" />
             <element signature="e#1332#1648#0#PHP" expanded="false" />
             <element signature="e#1438#1611#0#PHP" expanded="false" />
             <element signature="e#1551#1611#0#PHP" expanded="false" />
+            <element signature="e#1662#2345#0#PHP" expanded="false" />
+            <element signature="e#1806#2307#0#PHP" expanded="false" />
+            <element signature="e#1994#2118#0#PHP" expanded="false" />
+            <element signature="e#2254#2307#0#PHP" expanded="false" />
+            <element signature="e#2399#2471#0#PHP" expanded="false" />
+            <element signature="e#2485#3663#0#PHP" expanded="false" />
+            <element signature="e#2755#3329#0#PHP" expanded="false" />
+            <element signature="e#2910#3311#0#PHP" expanded="false" />
+            <element signature="e#3416#3532#0#PHP" expanded="false" />
             <element signature="e#3844#3987#0#PHP" expanded="false" />
             <element signature="e#3941#3987#0#PHP" expanded="false" />
-            <element signature="n#getParams#0;n#Widget#0;n#!!top" expanded="true" />
-            <marker date="1461156006512" expanded="true" signature="2703:2717" placeholder="SELECT * FRO... ${$nameDataProvider}" />
+            <element signature="e#4066#5329#0#PHP" expanded="false" />
+            <element signature="e#4189#5289#0#PHP" expanded="false" />
+            <element signature="e#4254#4609#0#PHP" expanded="false" />
+            <element signature="e#4287#4564#0#PHP" expanded="false" />
+            <element signature="e#4432#4564#0#PHP" expanded="false" />
+            <element signature="e#4627#4956#0#PHP" expanded="false" />
+            <element signature="e#4662#4911#0#PHP" expanded="false" />
+            <element signature="e#4779#4911#0#PHP" expanded="false" />
+            <element signature="e#4974#5275#0#PHP" expanded="false" />
+            <element signature="e#5005#5257#0#PHP" expanded="false" />
+            <element signature="e#5125#5257#0#PHP" expanded="false" />
+            <element signature="n#__construct#0;n#Widget#0;n#!!top" expanded="true" />
+            <marker date="1461160081057" expanded="false" signature="2703:2717" placeholder="SELECT * FRO... ${$nameDataProvider}" />
           </folding>
         </state>
       </provider>
@@ -476,9 +525,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#__construct#0;n#TestExt#0;n#!!top" expanded="true" />
-            <marker date="1461155964406" expanded="true" signature="1020:1051" placeholder="SELECT * FRO... menu" />
-            <marker date="1461155964406" expanded="true" signature="1177:1222" placeholder="..." />
+            <element signature="n#TestExt#0;n#!!top" expanded="true" />
+            <element signature="n#run#0;n#TestExt#0;n#!!top" expanded="true" />
+            <marker date="1461160018862" expanded="true" signature="998:1029" placeholder="SELECT * FRO... menu" />
+            <marker date="1461160018862" expanded="false" signature="1152:1197" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -539,9 +589,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#__construct#0;n#TestExt#0;n#!!top" expanded="true" />
-            <marker date="1461155964406" expanded="true" signature="1020:1051" placeholder="SELECT * FRO... menu" />
-            <marker date="1461155964406" expanded="true" signature="1177:1222" placeholder="..." />
+            <element signature="n#TestExt#0;n#!!top" expanded="true" />
+            <element signature="n#run#0;n#TestExt#0;n#!!top" expanded="true" />
+            <marker date="1461160018862" expanded="true" signature="998:1029" placeholder="SELECT * FRO... menu" />
+            <marker date="1461160018862" expanded="false" signature="1152:1197" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -602,9 +653,10 @@
         <state relative-caret-position="272">
           <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
           <folding>
-            <element signature="n#__construct#0;n#TestExt#0;n#!!top" expanded="true" />
-            <marker date="1461155964406" expanded="true" signature="1020:1051" placeholder="SELECT * FRO... menu" />
-            <marker date="1461155964406" expanded="true" signature="1177:1222" placeholder="..." />
+            <element signature="n#TestExt#0;n#!!top" expanded="true" />
+            <element signature="n#run#0;n#TestExt#0;n#!!top" expanded="true" />
+            <marker date="1461160018862" expanded="true" signature="998:1029" placeholder="SELECT * FRO... menu" />
+            <marker date="1461160018862" expanded="false" signature="1152:1197" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -870,31 +922,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/Widget.php">
+    <entry file="file://$PROJECT_DIR$/ext/TestExt.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="131" column="53" selection-start-line="131" selection-start-column="53" selection-end-line="131" selection-end-column="53" />
+        <state relative-caret-position="136">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
           <folding>
-            <element signature="e#962#1279#0#PHP" expanded="false" />
-            <element signature="e#1332#1648#0#PHP" expanded="false" />
-            <element signature="e#1438#1611#0#PHP" expanded="false" />
-            <element signature="e#1551#1611#0#PHP" expanded="false" />
-            <element signature="e#3844#3987#0#PHP" expanded="false" />
-            <element signature="e#3941#3987#0#PHP" expanded="false" />
-            <element signature="n#getParams#0;n#Widget#0;n#!!top" expanded="true" />
-            <marker date="1461156006512" expanded="true" signature="2703:2717" placeholder="SELECT * FRO... ${$nameDataProvider}" />
+            <element signature="n#TestExt#0;n#!!top" expanded="true" />
+            <element signature="n#run#0;n#TestExt#0;n#!!top" expanded="true" />
+            <marker date="1461160018862" expanded="true" signature="998:1029" placeholder="SELECT * FRO... menu" />
+            <marker date="1461160018862" expanded="false" signature="1152:1197" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ext/TestExt.php">
+    <entry file="file://$PROJECT_DIR$/classes/Widget.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+        <state relative-caret-position="476">
+          <caret line="205" column="5" selection-start-line="205" selection-start-column="5" selection-end-line="205" selection-end-column="5" />
           <folding>
-            <element signature="n#__construct#0;n#TestExt#0;n#!!top" expanded="true" />
-            <marker date="1461155964406" expanded="true" signature="1020:1051" placeholder="SELECT * FRO... menu" />
-            <marker date="1461155964406" expanded="true" signature="1177:1222" placeholder="..." />
+            <element signature="e#883#3673#0#PHP" expanded="false" />
+            <element signature="e#962#1279#0#PHP" expanded="false" />
+            <element signature="e#1332#1648#0#PHP" expanded="false" />
+            <element signature="e#1438#1611#0#PHP" expanded="false" />
+            <element signature="e#1551#1611#0#PHP" expanded="false" />
+            <element signature="e#1662#2345#0#PHP" expanded="false" />
+            <element signature="e#1806#2307#0#PHP" expanded="false" />
+            <element signature="e#1994#2118#0#PHP" expanded="false" />
+            <element signature="e#2254#2307#0#PHP" expanded="false" />
+            <element signature="e#2399#2471#0#PHP" expanded="false" />
+            <element signature="e#2485#3663#0#PHP" expanded="false" />
+            <element signature="e#2755#3329#0#PHP" expanded="false" />
+            <element signature="e#2910#3311#0#PHP" expanded="false" />
+            <element signature="e#3416#3532#0#PHP" expanded="false" />
+            <element signature="e#3844#3987#0#PHP" expanded="false" />
+            <element signature="e#3941#3987#0#PHP" expanded="false" />
+            <element signature="e#4066#5329#0#PHP" expanded="false" />
+            <element signature="e#4189#5289#0#PHP" expanded="false" />
+            <element signature="e#4254#4609#0#PHP" expanded="false" />
+            <element signature="e#4287#4564#0#PHP" expanded="false" />
+            <element signature="e#4432#4564#0#PHP" expanded="false" />
+            <element signature="e#4627#4956#0#PHP" expanded="false" />
+            <element signature="e#4662#4911#0#PHP" expanded="false" />
+            <element signature="e#4779#4911#0#PHP" expanded="false" />
+            <element signature="e#4974#5275#0#PHP" expanded="false" />
+            <element signature="e#5005#5257#0#PHP" expanded="false" />
+            <element signature="e#5125#5257#0#PHP" expanded="false" />
+            <element signature="n#__construct#0;n#Widget#0;n#!!top" expanded="true" />
+            <marker date="1461160081057" expanded="false" signature="2703:2717" placeholder="SELECT * FRO... ${$nameDataProvider}" />
           </folding>
         </state>
       </provider>
