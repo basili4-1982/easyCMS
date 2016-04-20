@@ -5,8 +5,11 @@ class Widget
     const TYPE_DB=1;
     const TYPE_FUNC=2;
     const TYPE_ARRAY=3;
+    const TYPE_SQL=4;
 
     public $idKey;
+
+    protected $name;
 
     public function run($keyId)
     {
@@ -33,7 +36,6 @@ class Widget
         $wm->saveSetting($keyId,$name,$setting);
     }
 
-
    protected function getData($keyId,$name)
     {
         $options=$this->getSetting($keyId,$name);
@@ -44,7 +46,7 @@ class Widget
         {
             // Провайдер данных функция
             case self::TYPE_FUNC:{
-                    $nameDataProvider=unserialize($options['name_data_provider']);
+                 $nameDataProvider=$options['name_data_provider'];
 
                 // Класс модели и метод для получения данных
                 list($modelName,$methodName)=$nameDataProvider;
@@ -56,11 +58,33 @@ class Widget
             case self::TYPE_ARRAY:{
                 $nameDataProvider=$options['name_data_provider'];
                 if (!empty($nameDataProvider)){
-                    $rows = unserialize($nameDataProvider);
+                    $rows = $nameDataProvider;
                 }
                 else{
                     $rows = array();
                 }
+                break;
+            }
+
+            case self::TYPE_SQL:{
+                $sql=$options['name_data_provider'];
+                $pdo=Store::getInstance()->getPdo();
+                if (!empty($sql))
+                {
+                    $q=$pdo->prepare($sql);
+                    $params=[];
+                    // Если есть параметры достаю парсю
+                    if ( isset($options['params'])){
+                        $params=$this->getParams($options['params']);
+                    }
+                    $q->execute($params);
+
+                    $rows=$q->fetchAll(PDO::FETCH_ASSOC);
+                }
+                else{
+                    $rows=[];
+                }
+
                 break;
             }
 
@@ -70,7 +94,7 @@ class Widget
             }
 
             default:{
-                $nameDataProvider=unserialize($options['name_data_provider']);
+                $nameDataProvider=$options['name_data_provider'];
                 $condDataProvider=$options['cond_data_provider'];
 
                 $pdo=Store::getInstance()->getPdo();
@@ -78,7 +102,9 @@ class Widget
 
                 if ( !empty($condDataProvider) )
                 {
-                    $cond=unserialize($condDataProvider);
+                    $cond=$condDataProvider;
+
+                    $sql.=' WHERE ';
 
                     foreach ( $cond as $field => $item)
                     {
@@ -94,7 +120,16 @@ class Widget
                     }
                 }
 
-                $rows=$pdo->query($sql);
+                $q=$pdo->prepare($sql);
+
+                $params=[];
+                if ( isset($options['params'])){
+                    $params=$this->getParams($options['params']);
+                }
+
+                $q->execute($params);
+
+                $rows=$q->fetchAll(PDO::FETCH_ASSOC);
                 break;
             }
         }
@@ -109,11 +144,60 @@ class Widget
          */
         $wm=Store::model('Widget');
 
-       if (!$wm->hasKey($idKey)){
-           $this->idKey=$wm->newKey($idKey);
+       if (!$wm->hasKey($idKey,$this->name)){
+           $this->idKey=$wm->newKey($this->name);
        }else{
            $this->idKey=$idKey;
        }
    }
+
+    protected function getParams($params)
+    {
+        $res=[];
+
+        foreach ($params as $key => $item)
+        {
+            $arrItem=explode('@',$item);
+
+            $val=null;
+
+            switch ( strtoupper($arrItem[0]) )
+            {
+                case 'GET':{
+                    if (isset($arrItem[1])){
+                        $val=isset($_GET[$arrItem[1]])?$_GET[$arrItem[1]]:'';
+                    }
+                    else{
+                        Debug::write('В опциях нет параметра widgeta  '.$this->name,Debug::LEVEL_ERROR);
+                    }
+                    break;
+                }
+
+                case 'POST':{
+
+                    if (isset($arrItem[1])){
+                        $val=$_POST[$arrItem[1]];
+                    }
+                    else{
+                        Debug::write('В опциях нет параметра widgeta  '.$this->name,Debug::LEVEL_ERROR);
+                    }
+                    break;
+                }
+
+                default :{
+                    if (isset($arrItem[1])){
+                        $val=$_REQUEST[$arrItem[1]];
+                    }
+                    else{
+                        Debug::write('В опциях нет параметра widgeta  '.$this->name,Debug::LEVEL_ERROR);
+                    }
+                }
+            }
+
+            $res[$key]=$val;
+        }
+
+        return $res;
+    }
 
 }

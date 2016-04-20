@@ -8,9 +8,7 @@
  */
 class TestExt extends Widget
 {
-
-    protected $name;
-
+    
     function __construct()
     {
         $this->name='test';
@@ -24,30 +22,50 @@ class TestExt extends Widget
     {
         parent::init($keyId);
 
-        //var_dump($this->getSetting(1,$this->name));
+        $setting=array(
+          'type_data_provider'=>Widget::TYPE_FUNC,
+           'name_data_provider'=>['Data','data']
+        );
 
-        $this->saveSetting(2,$this->name,array(1,2));
-//
-//        var_dump($this->getSetting(1,$this->name));
+        $setting=array(
+            'type_data_provider'=>Widget::TYPE_ARRAY,
+            'name_data_provider'=>[1,2,3,4,5]
+        );
+
+        $setting=array(
+            'type_data_provider'=>Widget::TYPE_DB,
+            'name_data_provider'=>'menu',
+            'cond_data_provider'=>['id'=>['','>',':id']],
+            'params'=>[':id'=>'get@id']
+        );
 
 //        $setting=array(
-//          'type_data_provider'=>'',
-//           'name_data_provider'=>serialize(array(1,3,5))
+//            'type_data_provider'=>Widget::TYPE_SQL,
+//            'name_data_provider'=>'SELECT * FROM menu WHERE id>:id',
+//            'params'=>[':id'=>'get@id']
 //        );
-//
-//        $this->saveSetting($keyId,$this->name,$setting);
 
-        //$c=implode(',',$this->getSetting($keyId,'test'));
 
-        //$data=$this->getData($keyId,'test');
+        $this->saveSetting($keyId,$this->name,$setting);
+        
+        $data=$this->getData($keyId,'test');
 
-//        var_dump($data);
+        if (!empty($data))
+        {
+            foreach ($data as $item)
+            {
 
-//      foreach ($data as $item)
-//      {
-//        echo implode("\t",$item).PHP_EOL;
-//      }
+                if (is_array($item)){
+                    echo implode("\t",$item).PHP_EOL;
+                }
+                else{
+                    echo $item.PHP_EOL;
+                }
 
-        return "разметка виджета $keyId";
+            }
+
+        }
+
+      return "разметка виджета $keyId";
     }
 }

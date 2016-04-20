@@ -33,8 +33,7 @@ class WidgetModel
         if (!is_null($row['options'])){
 
             if ( !empty($row['options'])){
-                //return unserialize( $row['options'] );
-                return $row['options'];
+                return unserialize( $row['options'] );
             }
             else{
                 return null;
@@ -112,6 +111,7 @@ class WidgetModel
 
        $q=$this->pdo->prepare($sql);
        $q->execute([':id_key'=>$idKey,':name'=>$name]);
+
        return  $q->fetchColumn(0)>0;
    }
 }
