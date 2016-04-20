@@ -11,7 +11,7 @@ class Widget
 
     protected $name;
 
-    public function run($keyId)
+   public function run($keyId)
     {
         $this->init($keyId);
     }
@@ -27,7 +27,7 @@ class Widget
         return !is_null($setting)?$setting:array();
     }
 
-    protected function saveSetting($keyId,$name,$setting)
+   protected function saveSetting($keyId,$name,$setting)
     {
         /**
          * @var $wm WidgetModel;
@@ -151,7 +151,7 @@ class Widget
        }
    }
 
-  protected function getParams($params)
+   protected function getParams($params)
     {
         $res=[];
 
@@ -200,8 +200,17 @@ class Widget
         return $res;
     }
 
-    public function __construct()
+    public function render($view,$data=[])
+    {
+        $page = new Page();
+        
+        return $page->render($view,$data,true);
+    }
+
+   public function __construct()
     {
         $this->name=str_replace('ext','',strtolower(get_class($this)));
     }
+
+
 }

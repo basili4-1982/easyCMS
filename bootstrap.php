@@ -23,9 +23,9 @@ new Autoload();
 
 // регистрация расширений twig
 
-$ExtFiles=glob(ROOT_DIR.DIRECTORY_SEPARATOR.'ext'.DIRECTORY_SEPARATOR."*Ext.php");
+//  $ExtFiles=glob(ROOT_DIR.DIRECTORY_SEPARATOR.'ext'.DIRECTORY_SEPARATOR."*Ext.php");
 
-$page = new Page($ExtFiles);
+$page = new Page();
 
 
 

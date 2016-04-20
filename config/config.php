@@ -17,4 +17,5 @@ return [
                     ]
                 ],
     "debug"=>[],
+    "themes"=>'default'
 ];

@@ -16,13 +16,17 @@ class Page
 
     private $opt;
 
+    private $tplPath;
+
     private $pageinfo=array();
 
-    function __construct($extFiles)
+    function __construct()
     {
         $this->opt=Config::getInstance()->getKey('page');
 
-        $this->lodader = new Twig_Loader_Filesystem(ROOT_DIR.DIRECTORY_SEPARATOR."tpl");
+        $this->tplPath=ROOT_DIR.DIRECTORY_SEPARATOR."tpl";
+
+        $this->lodader = new Twig_Loader_Filesystem($this->tplPath);
         $this->twig = new Twig_Environment($this->lodader, array(
             //'cache' => ROOT_DIR.DIRECTORY_SEPARATOR."cache",
             'debug' => true
@@ -56,5 +60,42 @@ class Page
 
         echo $this->twig->render("layout/".$layout.".twig",$layoutData);
         echo Debug::logPage();
+    }
+
+    function render($view,$data,$capiture=false)
+    {
+
+        $themeName=Config::getInstance()->getKey('themes');
+
+        $themesPath='';
+
+        if (!empty($themeName))
+        {
+            $themesPath='/themes/'.$themeName;
+        }
+
+        $viewData=array();
+
+        if ( !empty($data))
+        {
+            foreach ($data as $k=>$v)
+            {
+                $viewData[$k]=$v;
+            }
+        }
+
+        if (file_exists($this->tplPath."/".$themesPath."/"."{$view}.twig")){
+            $cont=$this->twig->render($themesPath."/"."{$view}.twig",$viewData);
+        }
+        else{
+            $cont=$this->twig->render("{$view}.twig",$viewData);
+        }
+
+        
+        if ($capiture){
+            return $cont;
+        }else{
+            echo $cont;
+        }
     }
 }
