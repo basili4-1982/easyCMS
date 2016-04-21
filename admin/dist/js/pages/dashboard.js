@@ -2,7 +2,7 @@
  * Author: Abdullah A Almsaeed
  * Date: 4 Jan 2014
  * Description:
- *      This is a demo file used only for the main dashboard (index.php)
+ *      This is a demo file used only for the main dashboard (index.html)
  **/
 
 $(function () {
@@ -84,7 +84,7 @@ $(function () {
     },
     onRegionLabelShow: function (e, el, code) {
       if (typeof visitorsData[code] != "undefined")
-        el.php(el.php() + ': ' + visitorsData[code] + ' new visitors');
+        el.html(el.html() + ': ' + visitorsData[code] + ' new visitors');
     }
   });
 

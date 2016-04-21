@@ -613,7 +613,7 @@ function _init() {
     var settings = $.extend({
       //Refresh button selector
       trigger: ".refresh-btn",
-      //File source to be loaded (e.g: ajax/src.php)
+      //File source to be loaded (e.g: ajax/src.html)
       source: "",
       //Callbacks
       onLoadStart: function (box) {
