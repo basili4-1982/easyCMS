@@ -85,7 +85,7 @@ module.exports = function (grunt) {
     // Build the documentation files
     includes: {
       build: {
-        src: ['*.html'], // Source files
+        src: ['*.php'], // Source files
         dest: 'documentation/', // Destination directory
         flatten: true,
         cwd: 'documentation/build',

@@ -1124,7 +1124,7 @@ FixedColumns.prototype = /** @lends FixedColumns.prototype */{
 			$('>tbody>tr', that.dom.body).each( function (z) {
 				nClone = this.cloneNode(true);
 				nClone.className += ' DTFC_NoData';
-				$('td', nClone).html('');
+				$('td', nClone).php('');
 				nBody.appendChild( nClone );
 			} );
 		}

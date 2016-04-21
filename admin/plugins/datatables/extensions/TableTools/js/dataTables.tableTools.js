@@ -1101,7 +1101,7 @@ TableTools.prototype = {
 	"fnInfo": function ( message, time ) {
 		var info = $('<div/>')
 			.addClass( this.classes.print.info )
-			.html( message )
+			.php( message )
 			.appendTo( 'body' );
 
 		setTimeout( function() {
@@ -2271,7 +2271,7 @@ TableTools.prototype = {
 
 				if ( arr.length === 1 )
 				{
-					sLoopData = this._fnBoundData( $('td', arr[0].nTr).html(), oConfig.sFieldBoundary, regex );
+					sLoopData = this._fnBoundData( $('td', arr[0].nTr).php(), oConfig.sFieldBoundary, regex );
 					aData.push( sLoopData );
 				}
 			}
@@ -2463,7 +2463,7 @@ TableTools.prototype = {
 		{
 			$('<div/>')
 				.addClass( this.classes.print.message )
-				.html( oConfig.sMessage )
+				.php( oConfig.sMessage )
 				.prependTo( 'body' );
 		}
 

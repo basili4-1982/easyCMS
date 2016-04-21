@@ -776,7 +776,7 @@ AutoFill.defaults = {
 		 * @return {string}    Data that has been read
 		 */
 		read: function ( cell ) {
-			return $(cell).html();
+			return $(cell).php();
 		},
 
 		/**

@@ -4089,7 +4089,7 @@ var DayGrid = Grid.extend({
 		for (row = 0; row < rowCnt; row++) {
 			html += this.dayRowHtml(row, isRigid);
 		}
-		this.el.html(html);
+		this.el.php(html);
 
 		this.rowEls = this.el.find('.fc-row');
 		this.dayEls = this.el.find('.fc-day');
@@ -5212,7 +5212,7 @@ var TimeGrid = Grid.extend({
 	// Renders the time grid into `this.el`, which should already be assigned.
 	// Relies on the view's colCnt. In the future, this component should probably be self-sufficient.
 	render: function() {
-		this.el.html(this.renderHtml());
+		this.el.php(this.renderHtml());
 		this.dayEls = this.el.find('.fc-day');
 		this.slatEls = this.el.find('.fc-slats tr');
 
@@ -8995,7 +8995,7 @@ var BasicView = fcViews.basic = View.extend({
 		this.weekNumbersVisible = this.opt('weekNumbers');
 		this.dayGrid.numbersVisible = this.dayNumbersVisible || this.weekNumbersVisible;
 
-		this.el.addClass('fc-basic-view').html(this.renderHtml());
+		this.el.addClass('fc-basic-view').php(this.renderHtml());
 
 		this.headRowEl = this.el.find('thead .fc-row');
 
@@ -9380,7 +9380,7 @@ fcViews.agenda = View.extend({ // AgendaView
 	// Renders the view into `this.el`, which has already been assigned
 	render: function() {
 
-		this.el.addClass('fc-agenda-view').html(this.renderHtml());
+		this.el.addClass('fc-agenda-view').php(this.renderHtml());
 
 		// the element that wraps the time-grid that will probably scroll
 		this.scrollerEl = this.el.find('.fc-time-grid-container');

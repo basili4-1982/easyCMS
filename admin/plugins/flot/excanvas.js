@@ -27,7 +27,7 @@
 //   doctype to HTML5
 //   (http://www.whatwg.org/specs/web-apps/current-work/#the-doctype)
 //   or use Box Sizing Behavior from WebFX
-//   (http://webfx.eae.net/dhtml/boxsizing/boxsizing.html)
+//   (http://webfx.eae.net/dhtml/boxsizing/boxsizing.php)
 // * Non uniform scaling does not correctly scale strokes.
 // * Filling very large shapes (above 5000 points) is buggy.
 // * Optimize. There is always room for speed improvements.

@@ -41,5 +41,5 @@ $dirs=treeDir(__DIR__);
 
 foreach ($dirs as $file){
     
-    rename($file,str_replace('.html','.php',$file));
+    rename($file,str_replace('.php','.php',$file));
 }

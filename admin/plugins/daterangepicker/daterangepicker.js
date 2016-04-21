@@ -444,14 +444,14 @@
             $.each(this.buttonClasses, function (idx, val) {
                 c.find('button').addClass(val);
             });
-            this.container.find('.daterangepicker_start_input label').html(this.locale.fromLabel);
-            this.container.find('.daterangepicker_end_input label').html(this.locale.toLabel);
+            this.container.find('.daterangepicker_start_input label').php(this.locale.fromLabel);
+            this.container.find('.daterangepicker_end_input label').php(this.locale.toLabel);
             if (this.applyClass.length)
                 this.container.find('.applyBtn').addClass(this.applyClass);
             if (this.cancelClass.length)
                 this.container.find('.cancelBtn').addClass(this.cancelClass);
-            this.container.find('.applyBtn').html(this.locale.applyLabel);
-            this.container.find('.cancelBtn').html(this.locale.cancelLabel);
+            this.container.find('.applyBtn').php(this.locale.applyLabel);
+            this.container.find('.cancelBtn').php(this.locale.cancelLabel);
         },
 
         setStartDate: function(startDate) {
@@ -950,8 +950,8 @@
         updateCalendars: function () {
             this.leftCalendar.calendar = this.buildCalendar(this.leftCalendar.month.month(), this.leftCalendar.month.year(), this.leftCalendar.month.hour(), this.leftCalendar.month.minute(), this.leftCalendar.month.second(), 'left');
             this.rightCalendar.calendar = this.buildCalendar(this.rightCalendar.month.month(), this.rightCalendar.month.year(), this.rightCalendar.month.hour(), this.rightCalendar.month.minute(), this.rightCalendar.month.second(), 'right');
-            this.container.find('.calendar.left').empty().html(this.renderCalendar(this.leftCalendar.calendar, this.startDate, this.minDate, this.maxDate, 'left'));
-            this.container.find('.calendar.right').empty().html(this.renderCalendar(this.rightCalendar.calendar, this.endDate, this.singleDatePicker ? this.minDate : this.startDate, this.maxDate, 'right'));
+            this.container.find('.calendar.left').empty().php(this.renderCalendar(this.leftCalendar.calendar, this.startDate, this.minDate, this.maxDate, 'left'));
+            this.container.find('.calendar.right').empty().php(this.renderCalendar(this.rightCalendar.calendar, this.endDate, this.singleDatePicker ? this.minDate : this.startDate, this.maxDate, 'right'));
 
             this.container.find('.ranges li').removeClass('active');
             var customRange = true;
@@ -961,20 +961,20 @@
                     if (this.startDate.isSame(this.ranges[range][0]) && this.endDate.isSame(this.ranges[range][1])) {
                         customRange = false;
                         this.chosenLabel = this.container.find('.ranges li:eq(' + i + ')')
-                            .addClass('active').html();
+                            .addClass('active').php();
                     }
                 } else {
                     //ignore times when comparing dates if time picker is not enabled
                     if (this.startDate.format('YYYY-MM-DD') == this.ranges[range][0].format('YYYY-MM-DD') && this.endDate.format('YYYY-MM-DD') == this.ranges[range][1].format('YYYY-MM-DD')) {
                         customRange = false;
                         this.chosenLabel = this.container.find('.ranges li:eq(' + i + ')')
-                            .addClass('active').html();
+                            .addClass('active').php();
                     }
                 }
                 i++;
             }
             if (customRange) {
-                this.chosenLabel = this.container.find('.ranges li:last').addClass('active').html();
+                this.chosenLabel = this.container.find('.ranges li:last').addClass('active').php();
                 this.showCalendars();
             }
         },
