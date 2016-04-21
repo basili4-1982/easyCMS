@@ -11,8 +11,14 @@ class PageController
     function __construct()
     {
         $this->css['list']=[
-            ADMIN_WEB.'/plugins/datatables/dataTables.bootstrap.css'
+            ADMIN_WEB.'plugins/datatables/dataTables.bootstrap.css'
         ];
+
+        $this->js['list']=[
+
+            ADMIN_WEB.'dist/js/pages/page/list.js'
+        ];
+
     }
 
     function indexAction()
@@ -37,6 +43,7 @@ class PageController
 
         $pageTpl='pages/pages/list.php';
         $cssList=$this->css['list'];
+        $jsList=$this->js['list'];
 
         $pages=$page->getList();
 

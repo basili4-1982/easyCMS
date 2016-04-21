@@ -6,15 +6,6 @@
  * Time: 12:04
  */
 ?>
-<script>
-    $('.fa-eraser').click(
-        function () {
-            console.log("Удалить элемент");
-            return false;
-        }
-    );
-</script>
-
 <div class="row">
     <div class="col-xs-12">
         <div class="box">
