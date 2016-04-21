@@ -1,11 +1,6 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: 1
- * Date: 01.04.2016
- * Time: 16:47
- */
+
 class PageModel
 {
     /***
@@ -42,4 +37,7 @@ class PageModel
         return $this->pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getPage($id){
+        
+    }
 }

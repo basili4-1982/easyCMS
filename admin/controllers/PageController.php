@@ -49,4 +49,25 @@ class PageController
 
         require ADMIN_PATH."/layout.php";
     }
+
+    function editAction()
+    {
+        $id=isset($_GET['id'])?$_GET['id']:0;
+
+        if ( empty($id) ){
+            header('Location: '.ADMIN_WEB.'/index.php?p=page/list');
+            exit();
+        }
+
+        /**
+         * @var  $page PageModel
+         */
+        $page=Store::model('Page');
+
+        $pageTpl='pages/pages/form.php';
+
+        $page=$page->getList();
+
+        require ADMIN_PATH."/layout.php";
+    }
 }
