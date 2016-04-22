@@ -5,7 +5,7 @@
  * Crud
  * Class CrudConroller
  */
-class CrudConroller
+class CrudModel
 {
     const TYPE_LIST='list';
     const TYPE_ONE='one';
@@ -14,6 +14,8 @@ class CrudConroller
      * @var $pdo PDO
      */
     private $pdo;
+
+    public $table;
 
     protected $fields;
 
@@ -43,7 +45,7 @@ class CrudConroller
     public function getList()
     {
         
-        $sql="SELECT ".implode(',',$this->getFields(self::TYPE_LIST) ) ." FROM pages";
+        $sql="SELECT ".implode(',',$this->getFields(self::TYPE_LIST) ) ." FROM ".$this->table;
 
         return $this->pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
     }

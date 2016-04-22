@@ -7,7 +7,6 @@ class PageModel extends CrudModel
      * @var $pdo PDO
      */
     private $pdo;
-
     
    public function __construct($pdo)
     {
@@ -21,6 +20,8 @@ class PageModel extends CrudModel
             'layout'
         ];
         
+        $this->table='pages';
+        
     }
 
     public  function pageInfo($url)
@@ -30,7 +31,7 @@ class PageModel extends CrudModel
                    p.title,
                    p.meta,
                    p.layout 
-            FROM pages p WHERE p.url="'.$url.'"';
+            FROM '.$this->table.' p WHERE p.url="'.$url.'"';
         
         return $this->pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
     }

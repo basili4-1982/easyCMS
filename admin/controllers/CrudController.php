@@ -7,8 +7,11 @@
 class CrudController
 {
     public $css=array();
-    
-    function __construct()
+
+    protected $pages=[];
+    protected $name;
+
+    public function __construct()
     {
         $this->css['list']=[
             ADMIN_WEB.'plugins/datatables/dataTables.bootstrap.css'
@@ -19,29 +22,29 @@ class CrudController
             ADMIN_WEB.'dist/js/pages/page/list.js'
         ];
 
+        $this->name=str_replace('controller','',strtolower(get_class($this)));
     }
 
-    function indexAction()
+    public function indexAction()
     {
         $id=isset($_GET['id'])?$_GET['id']:0;
 
         if ( empty($id) ){
-            header('Location: '.ADMIN_WEB.'/index.php?p=page/list');
+            header('Location: '.ADMIN_WEB.'/index.php?p='.$this->name.'/list');
             exit();
         }
 
-        $pageTpl='pages/pages/index.php';
         require ADMIN_PATH."/layout.php";
     }
 
-    function listAction()
+    public function listAction()
     {
         /**
          * @var  $page PageModel
          */
         $page=Store::model('Page');
 
-        $pageTpl='pages/pages/list.php';
+        $pageTpl=$this->pages['list'];
         $cssList=$this->css['list'];
         $jsList=$this->js['list'];
 
@@ -50,12 +53,12 @@ class CrudController
         require ADMIN_PATH."/layout.php";
     }
 
-    function editAction()
+    public function editAction()
     {
         $id=isset($_GET['id'])?$_GET['id']:0;
 
         if ( empty($id) ){
-            header('Location: '.ADMIN_WEB.'/index.php?p=page/list');
+            header('Location: '.ADMIN_WEB.'/index.php?p='.$this->name.'/list');
             exit();
         }
 
@@ -64,10 +67,17 @@ class CrudController
          */
         $page=Store::model('Page');
 
-        $pageTpl='pages/pages/form.php';
-
-        $page=$page->getList();
+        $pageTpl=$this->pages['form'];
+        $cssList=$this->css['form'];
+        $jsList=$this->js['form'];
+        
+        //$page=$page->getList();
 
         require ADMIN_PATH."/layout.php";
+    }
+
+    public function addTpl($url,$tpl)
+    {
+        $this->pages[$url]=$tpl;
     }
 }
