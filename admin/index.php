@@ -16,6 +16,7 @@ else {
 
 $actionName=strtolower($actionName);
 $actionName.='Action';
+require ADMIN_PATH . "/controllers/CrudController.php";
 require  ADMIN_PATH."/controllers/{$controllerName}.php";
 
 $c = new $controllerName;

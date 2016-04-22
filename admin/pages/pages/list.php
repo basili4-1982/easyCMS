@@ -24,7 +24,7 @@
                     </thead>
                     <tbody>
                     <?php
-                        foreach ($pages as $page):
+                        foreach ($items as $page):
                     ?>
                             <tr>
                                 <td><?=$page['id']; ?> </td>
@@ -35,7 +35,7 @@
                                         <i class="fa fa-clone"></i>
                                         Копировать
                                     </a>
-                                    <a class="btn btn-app" href="#">
+                                    <a class="btn btn-app" href="/admin/index.php?p=page&id=<?=$page['id']; ?>">
                                         <i class="fa fa-edit"></i>
                                         Редактирование
                                     </a>

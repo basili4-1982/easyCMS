@@ -10,9 +10,12 @@ class CrudController
 
     protected $pages=[];
     protected $name;
+    protected $model;
 
-    public function __construct()
+    public function __construct($model)
     {
+        $this->model=$model;
+
         $this->css['list']=[
             ADMIN_WEB.'plugins/datatables/dataTables.bootstrap.css'
         ];
@@ -34,21 +37,31 @@ class CrudController
             exit();
         }
 
+        $model=Store::model($this->model);
+        $pageTpl=$this->pages['form'];
+
+        $cssList=isset($this->css['form'])?$this->css['form']:null;
+        $jsList=isset($this->js['form'])?$this->js['form']:null;
+
+
         require ADMIN_PATH."/layout.php";
     }
 
     public function listAction()
     {
         /**
-         * @var  $page PageModel
+         * @var  $model PageModel
          */
-        $page=Store::model('Page');
+        $model=Store::model($this->model);
 
+        // Шаблон старницы спиика
         $pageTpl=$this->pages['list'];
+        // Стили
         $cssList=$this->css['list'];
+        // JS
         $jsList=$this->js['list'];
 
-        $pages=$page->getList();
+        $items=$model->getList();
 
         require ADMIN_PATH."/layout.php";
     }
