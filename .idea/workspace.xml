@@ -6,48 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc58cd5d-738f-40fb-8fae-3dc513d2377e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/Field.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/Form.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/controllers/CrudController.php" afterPath="$PROJECT_DIR$/admin/controllers/CrudController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/pages/pages/form.php" afterPath="$PROJECT_DIR$/admin/pages/pages/form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Store.php" afterPath="$PROJECT_DIR$/classes/Store.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/CrudModel.php" afterPath="$PROJECT_DIR$/model/CrudModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/PageModel.php" afterPath="$PROJECT_DIR$/model/PageModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/.php_cs" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/.php_cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/ChangeLog-3.3.md" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/ChangeLog-3.3.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/README.md" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/composer.json" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/CodeCoverage.php" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/CodeCoverage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Driver.php" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Driver.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Driver/PHPDBG.php" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Driver/PHPDBG.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Driver/Xdebug.php" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Driver/Xdebug.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Exception/InvalidArgumentException.php" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Exception/InvalidArgumentException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Filter.php" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Filter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/Clover.php" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/Clover.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/Crap4j.php" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/Crap4j.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/Factory.php" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/Factory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/HTML.php" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/HTML.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/HTML/Renderer.php" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/HTML/Renderer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/HTML/renderer/Dashboard.php" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/HTML/renderer/Dashboard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/HTML/renderer/Directory.php" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/HTML/renderer/Directory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/HTML/renderer/File.php" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/HTML/renderer/File.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/Node.php" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/Node.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/Node/Directory.php" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/Node/Directory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/Node/File.php" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/Node/File.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/PHP.php" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/PHP.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/Text.php" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Report/Text.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Util.php" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/src/codecoverage/Util.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/tests/PHP/CodeCoverage/Report/HTMLTest.php" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/tests/PHP/CodeCoverage/Report/HTMLTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/tests/PHP/CodeCoverage/Report/XMLTest.php" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/tests/PHP/CodeCoverage/Report/XMLTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/tests/TestCase.php" afterPath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage/tests/TestCase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/README.md" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/src/Framework/MockObject/Generator.php" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/src/Framework/MockObject/Generator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/GeneratorTest.php" afterPath="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects/tests/GeneratorTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/pages/pages/list.php" afterPath="$PROJECT_DIR$/admin/pages/pages/list.php" />
     </list>
     <ignored path="site.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CrudController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CrudController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/controllers/CrudController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+            <state relative-caret-position="396">
+              <caret line="89" column="60" selection-start-line="89" selection-start-column="60" selection-end-line="89" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -106,8 +68,8 @@
       <file leaf-file-name="form.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/pages/pages/form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="34">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -117,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/classes/Form.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+              <caret line="14" column="66" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="66" />
               <folding>
                 <element signature="e#112#160#0#PHP" expanded="true" />
                 <element signature="e#351#395#0#PHP" expanded="true" />
@@ -126,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CrudModel.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CrudModel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/CrudModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="75" column="50" selection-start-line="75" selection-start-column="50" selection-end-line="75" selection-end-column="50" />
+            <state relative-caret-position="278">
+              <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
               <folding>
                 <element signature="e#7#77#0#PHP" expanded="false" />
                 <element signature="n#__construct#0;n#CrudModel#0;n#!!top" expanded="true" />
@@ -141,8 +103,19 @@
                 <element signature="e#811#1117#0#PHP" expanded="false" />
                 <element signature="e#1011#1103#0#PHP" expanded="false" />
                 <element signature="n#getFieldsByScenario#0;n#CrudModel#0;n#!!top" expanded="true" />
+                <element signature="n#getList#0;n#CrudModel#0;n#!!top" expanded="true" />
                 <marker date="1461586988881" expanded="true" signature="1617:1687" placeholder="SELECT p.id,... pages" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/pages/pages/list.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="337">
+              <caret line="37" column="93" selection-start-line="37" selection-start-column="93" selection-end-line="37" selection-end-column="93" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -206,14 +179,14 @@
         <option value="$PROJECT_DIR$/admin/controllers/CrudConroller.php" />
         <option value="$PROJECT_DIR$/admin/index.php" />
         <option value="$PROJECT_DIR$/admin/controllers/PageController.php" />
-        <option value="$PROJECT_DIR$/admin/pages/pages/list.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/classes/Field.php" />
         <option value="$PROJECT_DIR$/classes/Form.php" />
-        <option value="$PROJECT_DIR$/admin/pages/pages/form.php" />
-        <option value="$PROJECT_DIR$/admin/controllers/CrudController.php" />
         <option value="$PROJECT_DIR$/model/PageModel.php" />
         <option value="$PROJECT_DIR$/model/CrudModel.php" />
+        <option value="$PROJECT_DIR$/admin/pages/pages/list.php" />
+        <option value="$PROJECT_DIR$/admin/pages/pages/form.php" />
+        <option value="$PROJECT_DIR$/admin/controllers/CrudController.php" />
       </list>
     </option>
   </component>
@@ -478,7 +451,7 @@
       <workItem from="1461312142099" duration="9259000" />
       <workItem from="1461569569254" duration="1060000" />
       <workItem from="1461573336856" duration="1116000" />
-      <workItem from="1461577639625" duration="5254000" />
+      <workItem from="1461577639625" duration="5580000" />
     </task>
     <task id="LOCAL-00001" summary="PDO&#10;">
       <created>1460728987425</created>
@@ -585,11 +558,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461331864588</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Обобщение механизьма CRUD   &#10; &#10;">
+      <created>1461587018949</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1461587018949</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100559000" />
+    <option name="totallyTimeSpent" value="100885000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -597,15 +577,15 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23454158" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32814237" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32850778" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -895,14 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/layout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="567" column="26" selection-start-line="567" selection-start-column="26" selection-end-line="567" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/dist/js/pages/page/list.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -921,14 +893,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/pages/pages/list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="37" column="66" selection-start-line="37" selection-start-column="66" selection-end-line="37" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -972,22 +936,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/controllers/PageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/controllers/CrudController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/PageModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
@@ -1000,29 +948,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/pages/pages/form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/Form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-          <folding>
-            <element signature="e#112#160#0#PHP" expanded="true" />
-            <element signature="e#351#395#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/CrudModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="75" column="50" selection-start-line="75" selection-start-column="50" selection-end-line="75" selection-end-column="50" />
+        <state relative-caret-position="278">
+          <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
           <folding>
             <element signature="e#7#77#0#PHP" expanded="false" />
             <element signature="n#__construct#0;n#CrudModel#0;n#!!top" expanded="true" />
@@ -1033,8 +962,60 @@
             <element signature="e#811#1117#0#PHP" expanded="false" />
             <element signature="e#1011#1103#0#PHP" expanded="false" />
             <element signature="n#getFieldsByScenario#0;n#CrudModel#0;n#!!top" expanded="true" />
+            <element signature="n#getList#0;n#CrudModel#0;n#!!top" expanded="true" />
             <marker date="1461586988881" expanded="true" signature="1617:1687" placeholder="SELECT p.id,... pages" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/controllers/PageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/layout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="329" column="58" selection-start-line="329" selection-start-column="58" selection-end-line="329" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/pages/pages/list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="37" column="93" selection-start-line="37" selection-start-column="93" selection-end-line="37" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="66" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="66" />
+          <folding>
+            <element signature="e#112#160#0#PHP" expanded="true" />
+            <element signature="e#351#395#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/pages/pages/form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/controllers/CrudController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="89" column="60" selection-start-line="89" selection-start-column="60" selection-end-line="89" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
     </entry>

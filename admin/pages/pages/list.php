@@ -35,7 +35,7 @@
                                         <i class="fa fa-clone"></i>
                                         Копировать
                                     </a>
-                                    <a class="btn btn-app" href="/admin/index.php?p=page&id=<?=$page['id']; ?>">
+                                    <a class="btn btn-app" href="/admin/index.php?p=page/edit&id=<?=$page['id']; ?>">
                                         <i class="fa fa-edit"></i>
                                         Редактирование
                                     </a>

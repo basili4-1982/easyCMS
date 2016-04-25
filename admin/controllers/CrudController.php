@@ -87,8 +87,10 @@ class CrudController
 
         $form= new Form('#');
 
-        $formData = $form->build_form(false);
+        $form->addInputOfModel('Page',['scenario'=>'scenario']);
 
+        $formData = $form->build_form(false);
+        
         require ADMIN_PATH."/layout.php";
     }
 
