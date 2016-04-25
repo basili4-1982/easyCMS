@@ -76,7 +76,7 @@ class CrudController
         }
 
         /**
-         * @var  $page PageModel
+         * @var  $model PageModel
          */
         $model=Store::model($this->model);
 
@@ -85,12 +85,11 @@ class CrudController
         $cssList=isset($this->css['form'])?$this->css['form']:null;
         $jsList=isset($this->js['form'])?$this->js['form']:null;
 
-        $form= new Form('#');
-
-        $form->addInputOfModel('Page',['scenario'=>'scenario']);
-
-        $formData = $form->build_form(false);
+        $form= new Form('#',false,$model->getItem($id));
+        $form->addInputOfModel($this->model,['scenario'=>'save']);
         
+        $formData = $form->build_form(false);
+            
         require ADMIN_PATH."/layout.php";
     }
 

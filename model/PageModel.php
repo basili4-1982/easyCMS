@@ -12,11 +12,11 @@ class PageModel extends CrudModel
     {
         parent::__construct($pdo);
 
-        $this->addField(new Field('id',null,['list','one']));
-        $this->addField(new Field('url',null,['list','one']));
-        $this->addField(new Field('title',null,['list','one']));
-        $this->addField(new Field('meta',null,['list','one']));
-        $this->addField(new Field('layout',null,['list','one']));
+        $this->addField(new Field('id',null,['list','save','one']));
+        $this->addField(new Field('url',null,['list','save','one']));
+        $this->addField(new Field('title',null,['list','save','one']));
+        $this->addField(new Field('meta',null,['list','save','one']));
+        $this->addField(new Field('layout',null,['list','save','one']));
 
         $this->table='pages';
     }

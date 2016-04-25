@@ -91,4 +91,11 @@ class CrudModel
 
     }
 
+    public function findByPk($pkKey)
+    {
+        if (is_scalar($pkKey)){
+            return $this->getItem($pkKey);
+        }
+    }
+
 }
