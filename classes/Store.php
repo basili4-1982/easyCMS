@@ -33,6 +33,7 @@ class Store
     
     private function __construct($dsn, $username, $passwd, $options)
     {
+
         try
         {
             $this->pdo=new PDO($dsn, $username, $passwd, $options);

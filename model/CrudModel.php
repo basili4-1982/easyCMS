@@ -7,9 +7,6 @@
  */
 class CrudModel
 {
-    const TYPE_LIST='list';
-    const TYPE_ONE='one';
-
     /***
      * @var $pdo PDO
      */
@@ -24,35 +21,69 @@ class CrudModel
         $this->pdo= $pdo;
     }
 
-    /**
+    /***
      * Возвражает спсиок полей изходя из типа запрашиваемых данных
-     * @param $type одно из  значений  TYPE_LIST или TYPE_ONE
+     * @param $scenarios
+     * @return array
      */
-    protected function getFields($type=self::TYPE_LIST)
+    public function getFieldsNameByScenario($scenarios)
     {
-        if (isset($this->fields[$type])){
-            return $this->fields[$type];
-        }
-        else {
-            if ($type==self::TYPE_ONE){
-                return $this->getFields(self::TYPE_LIST);
-            }
+        $res=[];
+        if (is_array($scenarios)){
 
-            return ['*'];
+            foreach ($scenarios as $scenario){
+                /**
+                 * @var $field Field
+                 */
+
+                foreach ($this->fields[$scenario] as $field){
+                    $res[]=$field->getName();
+                }
+            }
+        }else{
+            if (isset($this->fields[$scenarios])){
+                /**
+                 * @var $field Field
+                 */
+                $fields=$this->fields[$scenarios];
+                
+                foreach ($fields as $field){
+                    $res[]=$field->getName();
+                }
+            }
         }
+        return $res;
+    }
+
+    public function getFieldsByScenario($scenarios)
+    {
+        $res=[];
+        if (is_array($scenarios)){
+            foreach ($scenarios as $scenario){
+                $res[]=$this->fields[$scenario];
+            }
+            return $res;
+        }else{
+            if (isset($this->fields[$scenarios])){
+                $res=$this->fields[$scenarios];
+            }
+        }
+        return $res;
     }
 
     public function getList()
     {
-        
-        $sql="SELECT ".implode(',',$this->getFields(self::TYPE_LIST) ) ." FROM ".$this->table;
-
+        $sql="SELECT ".implode(',',$this->getFieldsNameByScenario('list') ) ." FROM ".$this->table;
         return $this->pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function getItem($id)
     {
+        $sql="SELECT ".implode(',',$this->getFieldsNameByScenario('one') ) ." FROM ".$this->table ." WHERE id=:id";
 
+        $q=$this->pdo->prepare($sql);
+        $q->execute([':id'=>$id]);
+        return $q->fetch(PDO::FETCH_ASSOC);
     }
 
     public function filter($filter)

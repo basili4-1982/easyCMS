@@ -78,13 +78,16 @@ class CrudController
         /**
          * @var  $page PageModel
          */
-        $page=Store::model('Page');
+        $model=Store::model($this->model);
 
         $pageTpl=$this->pages['form'];
-        $cssList=$this->css['form'];
-        $jsList=$this->js['form'];
-        
-        //$page=$page->getList();
+
+        $cssList=isset($this->css['form'])?$this->css['form']:null;
+        $jsList=isset($this->js['form'])?$this->js['form']:null;
+
+        $form= new Form('#');
+
+        $formData = $form->build_form(false);
 
         require ADMIN_PATH."/layout.php";
     }
