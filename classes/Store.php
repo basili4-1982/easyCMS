@@ -28,7 +28,8 @@ class Store
     static public  function model($modelName)
     {
         $modelClass=$modelName."Model";
-        return  new $modelClass(self::getInstance()->pdo);
+        $model=self::getInstance();
+        return  new $modelClass($model->pdo);
     }
     
     private function __construct($dsn, $username, $passwd, $options)

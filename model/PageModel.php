@@ -3,14 +3,11 @@
 
 class PageModel extends CrudModel
 {
-   /***
-     * @var $pdo PDO
-     */
-   private $pdo;
-    
-   public function __construct($pdo)
+       
+   public function __construct(PDO $pdo)
     {
         parent::__construct($pdo);
+
 
         $this->addField(new Field('id',null,['list','save','one']));
         $this->addField(new Field('url',null,['list','save','one']));
@@ -29,7 +26,7 @@ class PageModel extends CrudModel
                    p.meta,
                    p.layout 
             FROM '.$this->table.' p WHERE p.url="'.$url.'"';
-        
+
         return $this->pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
     }
     

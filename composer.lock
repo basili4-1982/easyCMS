@@ -4,9 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1f21e43547ffaeb0ddd9ed86e65e8c7c",
-    "content-hash": "f504659b645e33f3fe4c8d919def6732",
+    "hash": "515fb1394d4ee23bf657dd13f10a0546",
+    "content-hash": "4ab4204030550b7aa18b8248943fdb1c",
     "packages": [
+        {
+            "name": "basili4/php-form-builder",
+            "version": "0.8.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/basili4-1982/php-form-builder.git",
+                "reference": "master"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "PhpFormBuilder.php"
+                ]
+            }
+        },
         {
             "name": "doctrine/instantiator",
             "version": "1.0.5",
@@ -60,21 +75,6 @@
                 "instantiate"
             ],
             "time": "2015-06-14 21:17:01"
-        },
-        {
-            "name": "joshcanhelp/php-form-builder",
-            "version": "0.8.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/joshcanhelp/php-form-builder.git",
-                "reference": "master"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "PhpFormBuilder.php"
-                ]
-            }
         },
         {
             "name": "myclabs/deep-copy",

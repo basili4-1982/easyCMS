@@ -6,11 +6,10 @@ class Form extends PhpFormBuilder
 
     public function __construct($action, $args=[],$attributes=[])
     {
-
-        //$args['role']='form';
-
         $this->setAttributes($attributes);
         parent::__construct($action);
+
+        $this->set_att('role','form');
     }
 
     public function addInputOfModel($name,$options=[])

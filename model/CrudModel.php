@@ -10,7 +10,7 @@ class CrudModel
     /***
      * @var $pdo PDO
      */
-    private $pdo;
+    protected $pdo;
 
     public $table;
 

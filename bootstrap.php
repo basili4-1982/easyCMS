@@ -1,7 +1,8 @@
 <?php
 
 define('ROOT_DIR',__DIR__);
-define('WEB_DIR','/'.array_pop(explode('/',__DIR__))."/");
+$a=explode('/',__DIR__);
+define('WEB_DIR','/'.array_pop($a)."/");
 define('RUN_DIR',ROOT_DIR."/run");
 define('CFG_DIR',ROOT_DIR."/config");
 define('CFG_FILE',CFG_DIR."/config.php");

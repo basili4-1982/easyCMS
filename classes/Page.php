@@ -42,6 +42,7 @@ class Page
     {
         $this->pageinfo=Store::model('Page')->pageInfo($url);
 
+        
         $layout=$this->pageinfo['layout'];
 
         $layoutData=array();
