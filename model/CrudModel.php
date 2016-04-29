@@ -1,9 +1,9 @@
 <?php
 
 /***
- * контроллер обработки данных
+ * Общая модель обработки данных
  * Crud
- * Class CrudConroller
+ * Class CrudModel
  */
 class CrudModel
 {
@@ -95,6 +95,13 @@ class CrudModel
     {
         if (is_scalar($pkKey)){
             return $this->getItem($pkKey);
+        }
+    }
+
+    public function addField( Field $field )
+    {
+        foreach ($field->getScenarios() as $scenario){
+            $this->fields[$scenario][]=$field;
         }
     }
 

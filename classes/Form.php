@@ -33,8 +33,8 @@ class Form extends PhpFormBuilder
             $opt=[
                 'value'=>$this->getAttribute($field->getName()),
                 'wrap_class'=>'form-group',
-//                'before_html'=>'<div>',
-//                'after_html'=>'</div>',
+                'class'=>'form-control',
+                'placeholder'=>$field->getLabel(),
             ];
             $this->add_input($field->getLabel(),$opt);
         }
